@@ -4,10 +4,17 @@ public class HashTable {
     private Obj hash[];
     private int _count = 0;
 
-    HashTable(int size) { hash = new Obj[size]; }
+    HashTable(int size) {
+        hash = new Obj[size];
+    }
 
-    private int index(short key) { return key % hash.length; }
-    private boolean isFull() { return _count == hash.length - 1; }
+    private int index(short key) {
+        return key % hash.length;
+    }
+
+    private boolean isFull() {
+        return _count == hash.length - 1;
+    }
 
     void insert(Obj obj){
         if (isFull()) return;
